@@ -18,6 +18,7 @@ number_guesser/
 | | |-- input_validator.py
 |-- README.md
 |-- requirements.txt
+```
 
 ## Modules
 
