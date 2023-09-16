@@ -2,6 +2,7 @@ from typing import Union
 
 from src.game_logic.hint_generator import provide_hint
 from src.game_logic.random_number_generator import generate_random_number
+from src.game_logic.scorer import Score
 from src.utils.input_validator import validate_input
 
 
@@ -32,6 +33,8 @@ def main() -> None:
 
     # Generate a random number between start and end
     actual_number = generate_random_number(start=1, end=100)
+    print(actual_number)
+    score = Score()
 
     while True:
         # Get and validate the user's guess
@@ -44,14 +47,17 @@ def main() -> None:
 
         # If the user's guess is not valid (validate_input returned an error message)
         if type(user_guess) == str:
+            score = score.decrement_score(penalty=10)
             print(user_guess)
         else:
             # Provide a hint based on the user's guess
             hint = provide_hint(user_guess=user_guess, actual_number=actual_number)
+            score = score.decrement_score(penalty=5)
             print(hint)
 
             # If the user guessed correctly(Restart Game)
             if hint == 'You Winner':
+                print(f'Your Score: {score.return_score}')
                 restart_game = input('Do You Want to Play Again? Y or ...')
                 if restart_game.upper() == 'Y':
                     print('Start Game Again')

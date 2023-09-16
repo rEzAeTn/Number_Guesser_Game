@@ -38,4 +38,3 @@ def provide_hint(user_guess: int, actual_number: int) -> None:
     # If the user's guess is equal to the actual number
     else:
         return 'You Winner'
-
