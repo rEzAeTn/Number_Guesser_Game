@@ -57,7 +57,6 @@ def main() -> None:
                     print('Start Game Again')
                     # Generate a new random number between start and end
                     actual_number = generate_random_number(start=1, end=100)
-                    print(actual_number)
                 else:
                     print('End Game')
                     break
