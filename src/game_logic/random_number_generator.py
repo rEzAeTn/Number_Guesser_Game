@@ -26,7 +26,7 @@ def generate_random_number(start: int, end: int) -> int:
     >>> generate_random_number(1, 10)
     6  # Your output will vary as it's randomly generated
     """
-    # Generate Random Integer Number
+    # Generate Random Integer Number Between Start and End
     random_number = random.randint(start, end)
 
     return random_number

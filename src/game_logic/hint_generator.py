@@ -29,12 +29,13 @@ def provide_hint(user_guess: int, actual_number: int) -> None:
 
     # If the user's guess is more than the actual number
     if user_guess > actual_number:
-        return f'{user_guess} Is More Than Game Number'
+        return f'` {user_guess} ` Is More Than Game Number'
 
     # If the user's guess is less than the actual number
     elif user_guess < actual_number:
-        return f'{user_guess} Is Less Than Game Number'
+        return f'` {user_guess} ` Is Less Than Game Number'
 
     # If the user's guess is equal to the actual number
     else:
         return 'You Winner'
+

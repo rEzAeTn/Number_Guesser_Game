@@ -28,22 +28,22 @@ def validate_input(start: int, end: int) -> Union[int, str]:
     return 50
     """
 
-    user_guess = input('Guess a Number, For Quit Enter Q')
+    user_guess = input('Guess a Number, For Quit Enter ` Q `: ')
 
     # Quit Game
     if user_guess.upper() == 'Q':
         return "Quit"
 
-    # Check that the input is a integer
+    # Check That The Input Is a Integer
     if not (user_guess.isdigit() or (user_guess.startswith('-') and user_guess[1:].isdigit())):
         return "Invalid Input, Please Input Integer Number"
 
-    # Convert input to integer
+    # Convert Input to Integer
     user_guess_int = int(user_guess)
 
-    # Checking that the input is within the specified range
+    # Checking That The Input is Within the Specified Range
     if user_guess_int < start or user_guess_int > end:
-        return f'{user_guess_int} Is Out Of Range, Your Guess Should be Between {start} To {end}'
+        return f'` {user_guess_int} ` Is Out Of Range, Your Guess Should be Between `{start}` To `{end}`'
 
     # Input Number Is Valid
     return user_guess_int
