@@ -26,7 +26,7 @@ def main() -> None:
     Guess a Number, For EXIT Enter Q75
     75 Is More Than Game Number
     Guess a Number, For EXIT Enter Q60
-    You Winner)
+    You Winner
     Do You Want to Play Again? Y or ...N
     End Game
     """
@@ -47,17 +47,19 @@ def main() -> None:
 
         # If the user's guess is not valid (validate_input returned an error message)
         if type(user_guess) == str:
-            score = score.decrement_score(penalty=10)
+            # Subtract the Penalty from the Score
+            decr_score = score.decrement_score(penalty=10)
             print(user_guess)
         else:
             # Provide a hint based on the user's guess
             hint = provide_hint(user_guess=user_guess, actual_number=actual_number)
-            score = score.decrement_score(penalty=5)
+            # Subtract the Penalty from the Score
+            decr_score = score.decrement_score(penalty=5)
             print(hint)
 
             # If the user guessed correctly(Restart Game)
             if hint == 'You Winner':
-                print(f'Your Score: {score.return_score}')
+                print(f'Your Score: {decr_score + 5}')
                 restart_game = input('Do You Want to Play Again? Y or ...')
                 if restart_game.upper() == 'Y':
                     print('Start Game Again')

@@ -10,7 +10,7 @@ class Score:
 
         return self.score
 
-    
+
     def return_score(self):
         """Return the current score."""
         return self.score
