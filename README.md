@@ -15,6 +15,7 @@ number_guesser/
 | | |-- hint_generator.py
 | | |-- scorer.py
 | |-- utils/
+| | |-- get_start_end.py
 | | |-- input_validator.py
 |-- README.md
 |-- requirements.txt
@@ -29,6 +30,7 @@ number_guesser/
   - `scorer.py`: Manages the scoring system.
 - `src/utils/`: Contains utility functions.
   - `input_validator.py`: Validates user input.
+  - `get_start_end.py`: Define Range of Game Numbers
 
 ## How To Run
 - Clone the repository to your local machine.
